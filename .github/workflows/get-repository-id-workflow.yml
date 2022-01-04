@@ -1,0 +1,27 @@
+
+name: Get Repository Id
+
+on: [push]
+
+jobs:
+  get-repo-id-job:
+    name: Get and display the repository's ID
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+      
+      - name: Get Repository ID
+        id: getid
+        uses: ./.github/actions/get-repository-id
+        with:
+          authentication: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Show the Repository ID
+        env:
+          # to demonstrate storing the result of a step to an environment variable
+          REPO_ID: ${{ steps.getid.outputs.repo_id }}
+        # to demonstrate using an environment variable in a step
+        run: |
+         echo "RepositoryId: ${{ env.REPO_ID }}"

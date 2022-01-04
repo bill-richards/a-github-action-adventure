@@ -1,0 +1,16 @@
+name: "Get Repository Id"
+description: "For the current github repository, this action will return it's RepositoryId"
+
+inputs:
+  authentication:
+    description: "authentication token"
+    required: true
+    default: null
+
+outputs:
+  repo_id:
+    description: "The RepositoryId of the Github repository within which this Action is used"
+
+runs:
+  using: "node12"
+  main: "index.js"
