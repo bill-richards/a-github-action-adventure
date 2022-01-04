@@ -1,5 +1,5 @@
 
-name: Get Repository Id
+name: Get Repository Id Workflow
 
 on: [push]
 

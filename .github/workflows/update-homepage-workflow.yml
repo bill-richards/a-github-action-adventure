@@ -1,0 +1,17 @@
+name: Update Repository Homepage Workflow
+
+on: [push]
+
+jobs:
+  update-homepage-job:
+    name: Attempt to set the repository's homepageUrl using GraphQL
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+      
+      - name: Invoke the Action
+        uses: ./.github/actions/update-homepage
+        with:
+          authentication: ${{ secrets.GITHUB_TOKEN }}

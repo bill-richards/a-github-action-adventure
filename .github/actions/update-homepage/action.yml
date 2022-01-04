@@ -1,0 +1,11 @@
+name: "Update HomePage Url"
+description: "Use to set the homepageUrl property of the repository -unfortunately though, this action is FORBIDEN"
+inputs:
+  authentication:
+    description: "authentication token"
+    required: true
+    default: null
+
+runs:
+  using: "node12"
+  main: "index.js"
