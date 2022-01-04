@@ -1,6 +1,6 @@
 # [_A Github Action Adventure_](https://github.com/bill-richards/a-github-action-adventure)
 
-Check out the repository's documentation [here](https://bill-richards/a-github-action-adventure), it's a tale and one half ...
+Check out the repository's documentation [here](https://bill-richards.github.io/a-github-action-adventure), it's a tale and one half ...
 
 ## Developing stuff
 
@@ -69,7 +69,7 @@ You do not need to invoke Jekyll on the server; it will be invoked every time a 
 
 ## Don't repeat yourself (DRY)
 
-Did I mention that you should check out the repository's documentation [here](https://bill-richards/a-github-action-adventure), and also, it's a tale and one half ...
+Did I mention that you should check out the repository's documentation [here](https://bill-richards.github.io/a-github-action-adventure), and also, it's a tale and one half ...
 
 ## Other important stuff
 
