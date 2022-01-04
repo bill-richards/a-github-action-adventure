@@ -1,23 +1,18 @@
-# [_Jekyll Site Template_](https://github.com/bill-richards/jekyll-site-template)
+# a-github-action-adventure
 
-## If this is your new repo
+Check out the repository's documentation [here](https://bill-richards.github.io/a-github-action-adventure)
 
-Your repo is currently being setup. While that's happening you should head along to the settings page
-where you should enable Github Pages. Be sure to set the branch to `develop` and the folder to `/docs` 
-then click save. The repo will have been configured and the github-pages action will have been initiated.
 
-## If this is not your new repo
+```cmd
+cd a-github-action-adventure/docs/
 
-This is a [template repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template), used for the creation of new Git Repositories with a Jekyll web site ready enabled.
+# Run this initially, and subsequently when you make changes to the Gemfile
+bundle install
 
-The created repo will contain a `/docs` folder with which Jekyll will work to generate the web site. Initially the web site will be styled using the [minima theme](https://github.com/jekyll/minima).
+# to run the site locally
+[sudo] bundle exec jekyll serve --livereload
+```
 
-Why don't you jump right in and 
-- start [here](https://github.com/bill-richards/jekyll-site-template/generate)
-- then 
-  - add a description for your new repository, 
-  - and click "Create repository from template".
+#### _**Nota bene**_
 
-The name of your repository will be the subpath of your published website. This will generally be `https://<your-github-account_name>.gihub.io/<your-repository-name>`
-
-Once created, your new repository will execute a GitHub Actions workflow that uses the [_New Jekyll site cookiecutter_](https://github.com/bill-richards/new-jekyll-site-cookiecutter) to reconfigure the repository. This process make take 30 seconds or so, depending upon the availability of runners to pick up the workflow.
+You do not need to invoke Jekyll on the server; it will be invoked every time a change is made to the containing repository.
