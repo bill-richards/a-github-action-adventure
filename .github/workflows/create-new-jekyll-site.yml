@@ -1,0 +1,75 @@
+name: Create Jekyll /docs structure
+
+on: [push]
+
+jobs:
+  run-cookiecutter:
+    if: ${{ github.repository != 'bill-richards/jekyll-site-template' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Install cookiecutter
+        run: pip3 install cookiecutter
+
+      - uses: actions/github-script@v4
+        id: fetch-repo-and-user-details
+        with:
+          script: |
+            const query = `query($owner:String!, $name:String!) {
+              repository(owner:$owner, name:$name) {
+                name
+                description
+                owner {
+                  login
+                  ... on User {
+                    name
+                    email
+                    twitterUsername
+                  }
+                  ... on Organization {
+                    name
+                  }
+                }
+              }
+            }`;
+            const variables = {
+              owner: context.repo.owner,
+              name: context.repo.repo,
+            }
+            const result = await github.graphql(query, variables)
+            console.log(result)
+            return result
+
+      - name: Rebuild contents using cookiecutter
+        env:
+          INFO: ${{ steps.fetch-repo-and-user-details.outputs.result }}
+        run: |
+          # Delete this workflow:
+          rm -f .github/workflows/create-new-jekyll-site.yml
+          export REPO_NAME=$(echo $INFO | jq -r '.repository.name')
+
+          # Run cookiecutter
+          pushd /tmp
+          cookiecutter gh:bill-richards/new-jekyll-site-cookiecutter --no-input \
+            repository_name=$REPO_NAME \
+            site_description="$(echo $INFO | jq -r .repository.description)" \
+            site_title=$REPO_NAME \
+            github_user="$(echo $INFO | jq -r .repository.owner.login)" \
+            twitter="$(echo $INFO | jq -r .repository.owner.twitterUsername)" \
+            email="$(echo $INFO | jq -r .repository.owner.email)" \
+            author="$(echo $INFO | jq -r .repository.owner.name)"
+          popd
+          
+          # Move generated content and .gitignore to root directory of repo
+          mv /tmp/$REPO_NAME/* .
+          mv /tmp/$REPO_NAME/.gitignore .
+
+      - name: Force push new repo contents
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Initial library structure"
+          push_options: --force
