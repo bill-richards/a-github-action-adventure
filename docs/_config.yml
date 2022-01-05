@@ -22,7 +22,7 @@ domain: bill-richards.github.io      # ususally this will be user-name.github.io
 baseurl: /a-github-action-adventure    # the subpath of your site, e.g. /blog. Leave blank for no sub-path
 url: https://bill-richards.github.io # ususally this will be https://user-name.github.io
 
-title: "a-github-action-adventure"
+title: "A Github Action Adventure"
 author: Bill Richards
 email: bill@greyskin.co.uk
 description: > 
