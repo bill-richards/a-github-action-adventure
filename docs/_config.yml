@@ -32,7 +32,7 @@ twitter_username: not_a_whisper # do not include the @ symbol
 github_username:  bill-richards # do not include the @ symbol
 
 # Build settings
-theme: minima
+theme: architect
 
 #theme: minima
 #theme: jekyll-theme-dinky
