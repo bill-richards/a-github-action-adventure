@@ -60,7 +60,7 @@ bundle install
 ### How you can change it ... <mark>(yep ... this is super easy too)</mark>
 
 - If you want to make changes to the _Site Title_, for example, make that change [here](docs/_config.yml)
-- All of the site files live in the `/docs` directory 
+- All of the site files live in the `/docs` directory
 - You can add D/Html, JavaScript, Markdown
 
 #### _**Nota bene**_
