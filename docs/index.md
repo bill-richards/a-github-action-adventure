@@ -3,9 +3,7 @@ layout: default
 title: home
 ---
 
-# [_A Github Action Adventure_](https://github.com/bill-richards/a-github-action-adventure)
-
-## Developing stuff
+# Developing stuff
 
 I'm doing this all on LINUX, and if you have any sense, you'll be doing that too: though, admittedly mine is running on WSL, so it seems that even the worst of us (that's me, not you) is capable of at least a modicum of redemption.
 
@@ -54,16 +52,11 @@ I'm doing this all on LINUX, and if you have any sense, you'll be doing that too
 - If you want to make changes to the _Site Title_, for example, make that change in `docs/_config.yml`
 - All of the site files live in the `docs/` directory
 - You can add content using d/html, JavaScript, or Markdown
+- [It's a shame about Ray]({% link about.md %})
 
 #### _**Nota bene**_
 
 You do not need to invoke Jekyll on the server; it will be invoked every time a change is made to the containing repository.
 
-## Other important stuff
-
-> This repostory was generated from the [bill-richards/jekyll-site-template](https://github.com/bill-richards/jekyll-site-template), a [_template_]((https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template)) repository, which itself uses [bill-richards/jekyll-site-cookiecutter](https://github.com/bill-richards/jekyll-site-cookiecutter), a _cookiecutter_ repository. Go check them out to see how they work together, it's a pretty cool concept -and sadly I cannot take the credit for it, I was inspired by [this](https://github.com/simonw/python-lib-template-repository) repository by [simonw](https://github.com/simonw)
-
-
-The first page
 
  
