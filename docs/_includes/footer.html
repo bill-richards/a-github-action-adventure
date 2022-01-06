@@ -9,11 +9,11 @@
 
       <div class="footer-col footer-col-2">
         <p>{% assign date = '1972-03-19T10:00:00Z' %}
-          The world was blessed {{ date | timeago }}</p>
+          the world was blessed {{ date | timeago }}</p>
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+        <p>{{- site.description | downcase | escape -}}</p>
       </div>
 
     </div>

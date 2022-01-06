@@ -3,60 +3,88 @@ layout: default
 title: home
 ---
 
-# Developing stuff
+# developing stuff
 
-I'm doing this all on LINUX, and if you have any sense, you'll be doing that too: though, admittedly mine is running on WSL, so it seems that even the worst of us (that's me, not you) is capable of at least a modicum of redemption.
+i'm doing this all on LINUX, and if you have any sense, you'll be doing that too: though, admittedly mine is running on WSL, so it seems that even the worst of us (that's me, not you) is capable of at least a modicum of redemption.
 
-### What you'll need
+[it's a shame about ray]({% link about.md %})
 
-- Ruby 
+## getting going
+
+- [ ] fulfill the pre-requisites
+
+  _they are listed below_
+
+- [ ] get the code
+
+  _that's what you're here for isn't it?_
+
+- [ ] play around with it
+
+  _there's not just the website stuff (which is pretty clever, by the way)
+  there's also some stuff about Github **workflows**, and **Actions**_
+
+### pre-requisites
+
+- [ruby](https://www.ruby-lang.org/en/documentation/installation/)
 
   get it installed like this `sudo apt-get install ruby`
 
-- jekyll
+- [jekyll](https://jekyllrb.com/)
   
   do that like this `gem install bundler jekyll`
 
-  ### How you can get it ... <mark>(it's really easy)</mark>
+### getting the code
 
-1. Get the source code using
+#### how you can get it ... <mark>(it's really easy)</mark>
 
-    - HTTPS `git clone https://github.com/bill-richards/a-github-action-adventure`, 
-    - SSH `git@github.com:bill-richards/a-github-action-adventure.git`, 
-    - or Github.Cli `gh repo clone bill-richards/a-github-action-adventure`
+1. get the source code using
+
+    - https `git clone https://github.com/bill-richards/a-github-action-adventure`, 
+    - ssh `git@github.com:bill-richards/a-github-action-adventure.git`, 
+    - or github.cli `gh repo clone bill-richards/a-github-action-adventure`
 
    > you can also clone the repository using the IDE of your choice
 
-2. Prepare your environment
+2. prepare your environment
 
    ```cmd
    cd a-github-action-adventure/docs/
 
-   # Run this initially, and subsequently when you make changes to the Gemfile
-   bundle install
+   # run this initially, and subsequently when you make changes to the Gemfile
+      bundle install
    ```
 
-3. Open up the code in your IDE of choice (or even in vi, notepad, whatever is your poison, you strange and bizarre individual).
+3. open up the code in your ide of choice (or even in vi, notepad, whatever is your poison, you strange and bizarre individual).
 
-   ### How you can use it ... <mark>(this is also really easy)</mark>
+   #### how you can use it ... <mark>(this is also really easy)</mark>
 
-4. Run the website using [Jekyll](https://jekyllrb.com/)
+4. run the website using jekyll[^1]
 
    ```cmd
    # to run the site locally
    [sudo] bundle exec jekyll serve --livereload
    ```
 
-### How you can change it ... <mark>(yep ... this is super easy too)</mark>
+### how the code is organised
 
-- If you want to make changes to the _Site Title_, for example, make that change in `docs/_config.yml`
-- All of the site files live in the `docs/` directory
-- You can add content using d/html, JavaScript, or Markdown
-- [It's a shame about Ray]({% link about.md %})
+| what do you want to look at | where you should look | | | |
+|:-|:-|
+| github _actions_ | `.github/actions` |
+| github _workflows_ | `.github/workflows` |
+| all website site files | `docs/`|
+| website-wide properties (_Site Title_, for example) | `docs/_config.yml`|
 
-#### _**Nota bene**_
+#### what content can you add?
 
-You do not need to invoke Jekyll on the server; it will be invoked every time a change is made to the containing repository.
+- [x] html / dhtml
+- [x] javaScript
+- [x] markdown
+- [x] actions
+- [x] workflows
 
+[it's a shame about ray though]({% link about.md %})
 
- 
+## why would you want to make changes to the code?
+
+ [^1]: you do not need to invoke jekyll on the server; it will be invoked every time a change is made to the containing repository.

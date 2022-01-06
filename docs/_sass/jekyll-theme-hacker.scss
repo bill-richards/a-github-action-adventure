@@ -25,7 +25,7 @@ body {
   color: $body-foreground;
   font-size: 16px;
   line-height: 1.5;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family: consolas, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
 /* General & 'Reset' Stuff */
@@ -227,7 +227,8 @@ hr {
   border: 2px solid rgba(0, 0, 0, 0.7);
   border-bottom: 2px solid rgba(0, 0, 0, 0.7);
   border-top: 2px solid rgba(0, 0, 0, 1);
-  color: rgba(255, 255, 255, 0.8);
+  color: $apple-blossom;
+//  color: rgba(255, 255, 255, 0.8);
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 13px;
