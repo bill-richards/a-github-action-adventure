@@ -7,7 +7,7 @@ title: home
 
 i'm doing this all on LINUX, and if you have any sense, you'll be doing that too: though, admittedly mine is running on WSL, so it seems that even the worst of us (that's me, not you) is capable of at least a modicum of redemption.
 
-[it's a shame about ray]({% link about.md %})
+[it's a shame about ray](about.md)
 
 ## getting going
 
@@ -83,7 +83,7 @@ i'm doing this all on LINUX, and if you have any sense, you'll be doing that too
 - [x] actions
 - [x] workflows
 
-[it's a shame about ray though]({% link about.md %})
+[it's a shame about ray though](about.md)
 
 ## why would you want to make changes to the code?
 
