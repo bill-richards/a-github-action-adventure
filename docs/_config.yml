@@ -40,6 +40,7 @@ theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
   - jekyll-timeago
+  - jekyll-relative-links
 
 # Exclude from processing.
 # The following items will not be processed, by default.
