@@ -45,6 +45,7 @@ $on-laptop:        800px !default;
 /**
  * Lists
  */
+
 .task-list-item { 
   list-style-type: none;
   list-style-image: none;
@@ -72,12 +73,29 @@ $on-laptop:        800px !default;
   margin-top: 4em;;
 }
 
+.footnote::before {
+  content: "[";
+}
+.footnote::after {
+  content: "]";
+}
+
+div.actual-quote > blockquote {
+    text-align: right;
+    font-family: serif;
+    font-size: 12pt;
+    margin-right: 6em;
+    margin-top: -1em;
+}
+
 .footnote { color: $chelsea-cucumber; }
 .footnotes > ol > li {
   font-size: 9pt;
   color: $chelsea-cucumber;
 }
-
+.footnotes > ol > li > strike ~P {
+  display: inline;
+}
 /**
  * Site footer
  */

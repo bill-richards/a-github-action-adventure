@@ -1,7 +1,7 @@
 ---
 layout: default
-title: home
-permalink: /repo-development/
+title: repo-development
+permalink: /repo-development
 ---
 
 # developing stuff
