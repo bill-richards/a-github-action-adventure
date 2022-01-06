@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: it's a shame about ray
 permalink: /about/
 ---
 
